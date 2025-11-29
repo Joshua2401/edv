@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: expatriate-scraper
+    env: python
+    buildCommand: |
+      pip install -r requirements.txt
+      playwright install chromium
+    startCommand: python testing.py
